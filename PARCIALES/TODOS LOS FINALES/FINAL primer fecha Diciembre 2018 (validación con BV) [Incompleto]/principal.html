@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Principal</title>
+    <link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrapvalidator/dist/css/bootstrapValidator.css"/>
+    <script src="js/jquery/dist/jquery.min.js"></script>
+    <script src="js/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>  
+    <script src="principal.js"></script>
+    <script src="bv.js"></script>
+</head>
+<body>
+<div class="container" id="contenedorPpal">
+
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modificar usuario</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="registroForm" method="POST" class="form-horizontal" onsubmit="return false">
+                        <div class="form-group">
+                            <label for="txtApellido" class="col-md-2 control-label">Apellido </label>
+                            <div class="col-md-10"><input type="text" class="form-control" id="txtApellido" name="txtApellido" placeholder="Apellido" maxlength="15" required="required" /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtNombre" class="col-md-2 control-label">Nombre </label>
+                            <div class="col-md-10"><input type="text" class="form-control" id="txtNombre" name="txtNombre" placeholder="Nombre" maxlength="10" required="required" /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtEmail" class="col-md-2 control-label">E-mail </label>
+                            <div class="col-md-10"><input type="email" class="form-control" id="txtEmail" name="txtEmail" readonly="true" placeholder="E-mail" required="required" /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtLegajo" class="col-md-2 control-label">Legajo </label>
+                            <div class="col-md-10"><input type="number" class="form-control" id="txtLegajo" name="txtLegajo" placeholder="Legajo" min="100" max="999999" required="required" /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cboPerfil" class="control-label col-md-2">Perfil </label>
+                            <div class="col-md-10">
+                                <select name="cboPerfil" id="cboPerfil" class="form-control"><option>invitado</option><option>admin</option><option>superadmin</option></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtClave" class="col-md-2 control-label">Clave <span id="errorClave" style="color: red;" hidden="hidden">(*)</span></label>
+                            <div class="col-md-10"><input type="password" class="form-control" id="txtClave" name="txtClave" placeholder="Contraseña" minlength="4" maxlength="8" required="required"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtConfirmar" class="col-md-2 control-label">Confirmar <span id="errorConfirmar" style="color: red;" hidden="hidden">(*)</span></label>
+                            <div class="col-md-10"><input type="password" class="form-control" id="txtConfirmar" name="txtConfirmar" placeholder="Repita la clave" minlength="4" maxlength="8" required="required"></div>
+                        </div>
+                        <div class="form-group">
+                                <div class="col-md-12">
+                                    <center><img src="" width="568px" id="imgFoto"></center>
+                                </div>
+                            </div>
+                        <!--<div class="form-group">
+                            <label for="fileFoto" class="control-label col-md-2">Foto <span id="errorFoto" style="color: red" hidden >(*)</span></label>
+                            <div class="col-md-10"><input type="file" name="fileFoto" id="fileFoto" class="form-control" required="required" /></div>
+                        </div>-->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" id="btnGuardar" class="btn btn-success" data-dismiss="modal">Guardar</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModalBorrar" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Eliminar usuario</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="mensajeBorrar">Está seguro que desea eliminar este usuario?</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnEliminar" class="btn btn-danger" data-dismiss="modal">Eliminar</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>PRINCIPAL</h3>
+    <div id="opcInvitado"></div>
+    <div id="tabla" >
+        <table class='table'>
+            <tr>
+                <th class="col-lg-2 col-sm-3">CORREO</th>
+                <th class="col-lg-2 col-sm-3">NOMBRE</th>
+                <th class="col-lg-2 col-sm-3">APELLIDO</th> 
+                <th class="col-lg-2 col-sm-3">PERFIL</th>         
+                <th class="col-lg-2 col-sm-3">LEGAJO</th>    
+                <th class="col-lg-2 col-sm-3">FOTO</th>              
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

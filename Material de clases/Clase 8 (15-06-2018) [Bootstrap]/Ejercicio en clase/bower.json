@@ -1,0 +1,20 @@
+{
+  "name": "prueba",
+  "description": "prueba",
+  "main": "index.html",
+  "authors": [
+    "Ezequiel Mahafud"
+  ],
+  "license": "qwe",
+  "homepage": "qwe",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+	
+  ],
+  "dependencies" : { "boostrap" : "^3.3.7" }
+}

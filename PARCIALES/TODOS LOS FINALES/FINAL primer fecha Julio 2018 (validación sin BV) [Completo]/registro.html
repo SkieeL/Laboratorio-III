@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap.min.css">
+    <script src="js/jquery/dist/jquery.min.js"></script>
+    <script src="js/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="registro.js"></script>
+</head>
+<body>
+<div class="container">
+    <h3>REGISTRO</h3>
+    <form action="" method="POST" class="form-horizontal">
+        <div class="form-group">
+            <label for="txtApellido" class="col-md-2 control-label">Apellido <span id="errorApellido" style="color: red;" hidden="hidden">(*)</span></label>
+            <div class="col-md-10 input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control" id="txtApellido" placeholder="Apellido" maxlength="15" required="required" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="txtNombre" class="col-md-2 control-label">Nombre <span id="errorNombre" style="color: red;" hidden="hidden">(*)</span></label>
+            <div class="col-md-10 input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input type="text" class="form-control" id="txtNombre" placeholder="Nombre" maxlength="10" required="required" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="txtEmail" class="col-md-2 control-label">E-mail <span id="errorEmail" style="color: red;" hidden="hidden">(*)</span></label>
+            <div class="col-md-10 input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                <input type="email" class="form-control" id="txtEmail" placeholder="E-mail" required="required" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="txtLegajo" class="col-md-2 control-label">Legajo <span id="errorLegajo" style="color: red;" hidden="hidden">(*)</span></label>
+            <div class="col-md-10 input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-folder-open"></i></span>
+                <input type="number" class="form-control" id="txtLegajo" placeholder="Legajo" min="100" max="999999" required="required" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="cboPerfil" class="control-label col-md-2">Perfil <span id="errorPerfil" style="color: red" hidden >(*)</span></label>
+            <div class="col-md-10 input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-option-horizontal"></i></span>
+                <select name="cboPerfil" id="cboPerfil" class="form-control"><option>invitado</option></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="fileFoto" class="control-label col-md-2">Foto <span id="errorFoto" style="color: red" hidden >(*)</span></label>
+            <div class="col-md-10 input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-camera"></i></span>
+                <input type="file" name="fileFoto" id="fileFoto" class="form-control" required="required" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="txtClave" class="col-md-2 control-label">Clave <span id="errorClave" style="color: red;" hidden="hidden">(*)</span></label>
+            <div class="col-md-10 input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="password" class="form-control" id="txtClave" placeholder="Clave" minlength="4" maxlength="8" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="txtConfirmar" class="col-md-2 control-label">Confirmar <span id="errorConfirmar" style="color: red;" hidden="hidden">(*)</span></label>
+            <div class="col-md-10 input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input type="password" class="form-control" id="txtConfirmar" placeholder="Repita la clave" minlength="4" maxlength="8" required="required">
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="button" value="Enviar" id="btnEnviar" onclick="enviarRegistro()" class="btn btn-primary col-xs-12 col-sm-offset-1 col-sm-5" />
+            <input type="reset" value="Limpiar" id="btnLimpiar" class="btn btn-warning col-xs-12 col-sm-offset-1 col-sm-5" />
+        </div>
+    </form>
+
+    <div id="errorInputs" class="alert alert-danger" hidden="hidden"></div>
+    <div id="advertenciaRegistro" class="alert alert-danger" hidden="hidden"></div>
+
+</div>
+</body>
+</html>

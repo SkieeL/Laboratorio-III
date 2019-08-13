@@ -1,0 +1,5 @@
+// Crea un objeto de tipo persona con el nombre Juan y una edad de 35
+var obj : Persona = new Persona("Juan", 35);
+
+var str : string = JSON.stringify(obj);
+// { "nombre" : "Juan", "edad" : 35 }

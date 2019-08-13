@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>MODELO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+  <!-- AGREGAR ARCHIVOS JS AQUI -->
+  <script src=""></script>
+</head>
+
+<body style="background-color:darkgrey">
+  <div class="container" style="background-color:lightblue">
+    <br>
+    <h4>ABM - Auto - con Foto</h4>
+    <br>
+    <div class="row responsive-utilities-test visible-on">
+
+      <table class="table table" style="width:90%">
+        <tr>
+          <td style="width:45%">
+            <table class="table table-hover" style="background-color:cornflowerblue">
+              <tr>
+                <td><label class="col-md-2 control-label">Patente</label></td>
+                <td><input type="text" id="txtPatente" /></td>
+              </tr>
+              <tr>
+                <td><label class="col-md-2 control-label">Marca</label></td>
+                <td><select id="cboMarca" style="max-width:180px;min-width:130px" > 
+                    <option>Renault</option>
+                    <option>Ford</option>
+                    <option>Fiat</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label class="col-md-2 control-label">Precio</label></td>
+                <td><input type="text" id="txtPrecio" /></td>
+              </tr>
+              <tr>
+                <td><label class="col-md-2 control-label">Foto</label></td>
+                <td><input type="file" id="foto" /></td>
+              </tr>
+              <tr>
+                <td colspan="2" style="text-align:center"><img id="imgFoto" src="./BACKEND/auto_default.jpg" width="300px" height="100px" /></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <input type="button" value="Agregar" class="btn btn-success" onclick="" />
+                  <input type="button" value="Mostrar" class="btn btn-info" onclick="" />
+                  <input type="button" value="Filtrar por Marca" class="btn btn-default" onclick="" />
+                  <input type="button" value="Cargar Marcas" class="btn btn-warning" onclick="" />
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <div class="" style="background-color:lavenderblush;">
+              <div id="divTabla">
+                tabla aqu&iacute;...
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+    <input type="hidden" id="hdnIdModificacion"><!-- PARA MODIFICAR -->
+    <div id="divSpinner" style="display:block;position:absolute"><img id="imgSpinner" src="" /></div><!-- PARA EL SPINNER -->
+  </div>
+</body>
+
+</html>

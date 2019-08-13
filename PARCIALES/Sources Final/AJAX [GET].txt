@@ -1,0 +1,18 @@
+// Objeto AJAX
+let xhttp : XMLHttpRequest = new XMLHttpRequest();
+
+// Abierto y enviado por método GET
+xhttp.open("GET", "validar.php?user=SkieL&pass=1235", true);
+xhttp.send("");
+
+// Cuando cambia readyState se llama esta función
+xhttp.onreadystatechange = () => {
+    // Si el estado es 200 (ÉXITO) y la petición esta lista (4)
+    if (xhttp.status == 200 && xhttp.readyState == 4) {
+        // Toma la respuesta desde el servidor
+        let respuesta : string = xhttp.responseText;
+
+        // La muestra en un DIV
+        (<HTMLDivElement>document.getElementById("divResultado")).innerHTML = respuesta;
+    }
+}

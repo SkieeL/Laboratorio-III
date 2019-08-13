@@ -1,0 +1,7 @@
+// Transforma texto con formato JSON en un objeto (los atributos deben ser públicos)
+
+var str : string = '{ "nombre" : "Juan", "edad" : 35 }';
+var obj : Persona = JSON.parse(str);
+
+alert(obj.nombre);
+alert(obj.edad);

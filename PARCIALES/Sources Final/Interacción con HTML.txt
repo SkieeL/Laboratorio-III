@@ -1,0 +1,3 @@
+(<HTMLInputElement> document.getElementById("txtNombre")).value; // Traer valor de input text
+(<HTMLDivElement>document.getElementById("divResultado")).innerHTML = "Hola!"; // Escribir en un DIV
+(<HTMLImageElement> document.getElementById("imgFoto")).src = "BACKEND/imagen.jpg"; // Pone una imagen en un IMG

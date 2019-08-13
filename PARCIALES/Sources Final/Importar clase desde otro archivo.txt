@@ -1,0 +1,6 @@
+import {Auto} from "./Auto"; // La clase debe tener el modificador "export"
+
+/* NOTAS
+1. Requiere que la clase tenga el modificador "export".
+2. NO se agrega extensión .TS al buscar el archivo.
+*/

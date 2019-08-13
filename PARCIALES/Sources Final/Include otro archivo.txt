@@ -1,0 +1,8 @@
+// Agregar include (funciona como los de PHP, copia todo el código arriba)
+/// <reference path="./Auto.ts" />
+
+/* NOTAS
+1. Requiere que las clases/interfaces tengan el modificador "export".
+2. SÍ se agrega extensión .TS al buscar el archivo.
+3. Se transpila con outFile generando un sólo JS, sino falla.
+*/

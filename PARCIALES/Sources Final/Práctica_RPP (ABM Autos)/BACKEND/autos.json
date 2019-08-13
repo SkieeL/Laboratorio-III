@@ -1,0 +1,7 @@
+{"patente":"ac234ca","marca":"Ford","precio":8000,"foto":"ac234ca_Ford.jpg"}
+{"patente":"ad555zx","marca":"Ferrari","precio":50060,"foto":"ad555zx_Ferrari.jpg"}
+{ "marca" : "Renault", "precio" : 123465, "patente" : "TUVIEJA", "foto" : "TUVIEJA_Renault.jpg" }
+{ "marca" : "Renault", "precio" : 1501, "patente" : "abc123", "foto" : "abc123_Renault.jpg" }
+{ "marca" : "Renault", "precio" : 156, "patente" : "PUTO", "foto" : "PUTO_Renault.png" }
+{ "marca" : "Chevrolet", "precio" : 250005, "patente" : "FMK325", "foto" : "FMK325_Chevrolet.jpg" }
+{ "marca" : "Ford", "precio" : 250002, "patente" : "PUTIN", "foto" : "PUTIN_Ford.png" }
